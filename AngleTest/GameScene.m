@@ -83,40 +83,6 @@
                          );
     //NSLog(@"B relative to A: %2.0f, %2.0f", pointB.x, pointB.y);
     
-    
-    /*
-    if(pointB.y > 0 && pointB.x > 0){
-        angle = (2 * M_PI) - atanf( (pointB.x) / (pointB.y));
-        //NSLog(@"1");
-    }
-    else if(pointB.y == 0){
-        angle = pointB.x > 0 ? (M_PI * 1.5) : (M_PI * 0.5);
-        //NSLog(@"2");
-    }
-    else if(pointB.x == 0){
-        angle = pointB.y > 0 ? 0.0 : M_PI ;
-    }
-    else if(pointB.y < 0 && pointB.x > 0){
-        angle = M_PI - atanf( pointB.x / pointB.y);
-        //NSLog(@"3");
-    }
-    else if(pointB.y < 0 && pointB.x < 0){
-        angle = M_PI - atanf( (pointB.x) / (pointB.y));
-        //NSLog(@"4");
-    }
-    else if(pointB.y > 0 && pointB.x < 0){
-        angle = - atanf( (pointB.x) / (pointB.y));
-        //NSLog(@"5");
-    }
-     */
-    
-    //NSLog(@"angle: %f pi", angle/M_PI);
-    
-    
-    //-------- OR: ------------
-    
-    
-    //angle = -atanf(pointB.x / pointB.y);
     angle = -atan2f(pointB.x, pointB.y);
     
     NSLog(@"touch at: %f, %f angle: %f", pointB.x, pointB.y, angle/M_PI);
